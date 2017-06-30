@@ -2,8 +2,8 @@
 
 const chalk = require('chalk');
 const Insight = require('insight');
-const camelCase = require('lodash.camelCase');
-const upperFirst = require('lodash.upperFirst');
+const camelCase = require('lodash.camelcase');
+const upperFirst = require('lodash.upperfirst');
 const Generator = require('@ngx-rocket/core');
 const asciiLogo = require('@ngx-rocket/ascii-logo');
 
