@@ -9,7 +9,7 @@ SCRIPT_FOLDER=`dirname "${BASH_SOURCE[0]}"`
 TEST_FOLDER=$CWD/sample-addon
 CACHE_FOLDER=$CWD/cache
 TEST_ADDON_NAME="Sample Add-on"
-TEST_CASES=$SCRIPT_FOLDER/tests/**/*.json
+TEST_CASES=$SCRIPT_FOLDER/tests/*.json
 
 function cleanup() {
     cd $CWD
