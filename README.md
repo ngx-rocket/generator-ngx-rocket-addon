@@ -36,3 +36,7 @@ It will make your add-on available globally as if it was installed using `npm in
 make modifications to it.
 
 Then use the [ngX-Rocket CLI](https://github.com/ngx-rocket/cli) to test your add-on with the command `ngx new`.
+
+# License
+
+[MIT](LICENSE)
