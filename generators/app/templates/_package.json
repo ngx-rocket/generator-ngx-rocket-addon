@@ -1,5 +1,5 @@
 {
-  "name": "<%= props.projectName %>",
+  "name": "generator-<%= props.projectName %>",
   "version": "1.0.0",
   "description": "<%= props.description %>",
   "main": "./generators/app/index.js",

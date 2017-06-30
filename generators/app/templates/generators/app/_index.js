@@ -16,7 +16,7 @@ class <%= props.className %>Generator extends Generator {
   initializing() {
     // Setting version allows Yeoman to notify the user of updates
     this.version = pkg.version;
-    this.log(`Using ${chalk.cyan('ngx-rocket')} addon example ${chalk.green(this.version)}`);
+    this.log(`Using ${chalk.cyan('<%= props.projectName %>')} ${chalk.green(this.version)}`);
   }
 
   beforeWriting() {

@@ -54,7 +54,7 @@ class NgxAddonGenerator extends Generator {
   }
 
   end() {
-    this.log(`\nAll done! Take a look at ${chalk.green('generators/app/')} to get started.\n`);
+    this.log(`\nAll done! Take a look at ${chalk.green('generators/app')} to get started.\n`);
   }
 
 }
