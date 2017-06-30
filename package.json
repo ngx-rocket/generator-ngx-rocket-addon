@@ -17,7 +17,8 @@
     "enterprise",
     "scaffold",
     "boilerplate",
-    "cli"
+    "cli",
+    "meta"
   ],
   "author": "Yohan Lasorsa",
   "license": "MIT",
