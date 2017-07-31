@@ -6,7 +6,6 @@ const chalk = require('chalk');
 const pkg = require('../../package.json');
 
 class <%= props.className %>Generator extends Generator {
-
   // DO NOT add a constructor, it won't be called.
   // Use initializing() method instead.
   //
@@ -24,12 +23,10 @@ class <%= props.className %>Generator extends Generator {
     // used in templates
     Object.assign(this.props, this.sharedProps);
   }
-
 }
 <% } -%>
 
 module.exports = Generator.make({
-
   // Base directory of your templates
   baseDir: __dirname,
 <% if (props.advanced) { -%>
@@ -56,5 +53,4 @@ module.exports = Generator.make({
       when: props => props.sayHello
     }
   ]
-
 });
