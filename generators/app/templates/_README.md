@@ -9,14 +9,14 @@ version <%= version %>
 
 Install [ngX-Rocket CLI](https://github.com/ngx-rocket/cli) and this add-on:
 
-```bash
+```sh
 npm install -g @ngx-rocket/cli <%= props.projectName %>
 ```
 
 # Usage
 
 Generate a new project and follow instructions:
-```bash
+```sh
 ngx new
 ```
 
