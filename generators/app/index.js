@@ -12,7 +12,6 @@ const prompts = require('./prompts');
 const pkg = require('../../package.json');
 
 class NgxAddonGenerator extends Generator {
-
   initializing() {
     this.version = pkg.version;
     this.insight = new Insight({trackingCode: 'UA-93069862-2', pkg});
@@ -25,7 +24,25 @@ class NgxAddonGenerator extends Generator {
 
     this.insight.optOut = !this.options.analytics || process.env.DISABLE_NGX_ANALYTICS;
 
-    if (!this.options['skip-welcome']) {
+    // Updating
+    let fromVersion = null;
+
+    if (this.options.update) {
+      this.props = this.config.get('props') || {};
+      fromVersion = this.config.get('version');
+    }
+
+    if (fromVersion) {
+      if (fromVersion >= this.version) {
+        this.log(chalk.green('\nNothing to update, it\'s all good!\n'));
+        process.exit(0);
+      }
+
+      this.updating = true;
+      this.log(`\nUpdating ${chalk.green(this.props.appName)} project (${chalk.yellow(fromVersion)} -> ${chalk.yellow(this.version)})\n`);
+      this.log(`${chalk.yellow('Make sure you don\'t have uncommitted changes before overwriting files!')}`);
+      this.insight.track('generator', 'update', fromVersion, 'to', this.version);
+    } else if (!this.options['skip-welcome']) {
       this.log(asciiLogo());
     }
 
@@ -54,9 +71,12 @@ class NgxAddonGenerator extends Generator {
   }
 
   end() {
-    this.log(`\nAll done! Take a look at ${chalk.green('generators/app')} to get started.\n`);
+    if (this.updating) {
+      this.log(`\nUpdated ${chalk.green(this.props.appName)} to ${chalk.yellow(this.version)} successfully!\n`);
+    } else {
+      this.log(`\nAll done! Take a look at ${chalk.green('generators/app')} to get started.\n`);
+    }
   }
-
 }
 
 module.exports = Generator.make({
