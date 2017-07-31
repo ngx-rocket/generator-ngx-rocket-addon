@@ -1,3 +1,6 @@
+# 1.1.0
+- Added project updating support
+
 # 1.0.2
 - Updated dependencies
 

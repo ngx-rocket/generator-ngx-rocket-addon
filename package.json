@@ -1,6 +1,6 @@
 {
   "name": "generator-ngx-rocket-addon",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "ngX-Rocket add-on generator",
   "repository": "ngx-rocket/generator-ngx-rocket-addon",
   "main": "./generators/app/index.js",
