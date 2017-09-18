@@ -1,3 +1,6 @@
+# 1.1.2
+- Rename .* files to avoid npmignore
+
 # 1.1.1
 - Fixed *ignore files
 
