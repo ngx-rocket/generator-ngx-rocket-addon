@@ -1,6 +1,6 @@
-.idea/
-cache/
-test/
+/.idea/
+/cache/
+/test/
 node_modules/
 npm-debug.log
 .DS_Store
