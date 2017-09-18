@@ -1,3 +1,6 @@
+# 1.1.1
+- Fixed *ignore files
+
 # 1.1.0
 - Added project updating support
 
