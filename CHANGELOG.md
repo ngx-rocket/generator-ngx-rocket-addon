@@ -1,3 +1,6 @@
+# 1.2.0
+- Added .editorconfig to project and template
+
 # 1.1.2
 - Rename .* files to avoid npmignore
 
