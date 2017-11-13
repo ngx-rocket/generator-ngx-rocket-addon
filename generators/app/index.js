@@ -53,6 +53,7 @@ class NgxAddonGenerator extends Generator {
 
   configuring() {
     this.insight.track('generator', this.props.advanced ? 'advanced' : 'simple');
+    this.insight.track('package-manager', this.packageManager);
     this.props.className = upperFirst(camelCase(this.props.appName));
   }
 
@@ -60,14 +61,14 @@ class NgxAddonGenerator extends Generator {
     const skipInstall = this.options['skip-install'];
 
     if (!skipInstall) {
-      this.log(`\nRunning ${chalk.yellow('npm install')}, please wait...`);
-    }
+      this.log(`\nRunning ${chalk.yellow(`${this.packageManager} install`)}, please wait...`);
 
-    this.installDependencies({
-      skipInstall,
-      bower: false,
-      skipMessage: true
-    });
+      if (this.packageManager === 'yarn') {
+        this.yarnInstall();
+      } else {
+        this.npmInstall(null, {loglevel: 'error'});
+      }
+    }
   }
 
   end() {
