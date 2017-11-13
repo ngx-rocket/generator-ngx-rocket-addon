@@ -1,3 +1,6 @@
+# 1.3.0
+- Added Yarn support (https://github.com/ngx-rocket/generator-ngx-rocket/issues/49)
+
 # 1.2.1
 - Updated dependencies
 
