@@ -1,3 +1,7 @@
+**DEPRECATED: This generator has now been merged with
+[ngX-Rocket generator](https://github.com/ngx-rocket/generator-ngx-rocket), this repository will not be updated
+anymore.**
+
 # :rocket: ngx-rocket/generator-ngx-rocket-addon
 
 [![NPM version](https://img.shields.io/npm/v/generator-ngx-rocket-addon.svg)](https://www.npmjs.com/package/generator-ngx-rocket-addon)
