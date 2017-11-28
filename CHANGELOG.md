@@ -1,3 +1,6 @@
+# 1.3.1
+- Deprecated package as it's now merged with [ngX-Rocket generator](https://github.com/ngx-rocket/generator-ngx-rocket)
+
 # 1.3.0
 - Added Yarn support (https://github.com/ngx-rocket/generator-ngx-rocket/issues/49)
 
