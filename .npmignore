@@ -1,9 +1,0 @@
-/.idea/
-/cache/
-/test/
-/.gitignore
-/.npmignore
-/.travis.yml
-/.editorconfig
-npm-debug.log
-.DS_Store
